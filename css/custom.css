@@ -1,0 +1,110 @@
+body {
+    scroll-behavior: smooth;
+}
+.navbar-nav .link:hover {
+    background: cornflowerblue !important;
+    transition: all ease 0.5s !important;
+    color: #fff !important;
+}
+/* Profile Data */
+.profile-data {
+    list-style: none !important;
+    list-style-type: none !important;
+}
+.add-icon {
+    color: #4e73df !important;
+}
+#toggleMenuOption {
+    border-radius: 50px !important;
+}
+#toggleMenuOption:hover {
+    background: #bac5e880 !important;
+}
+#cardFile {
+    background: hsla(198, 100%, 95%, 0.5);
+}
+#cardFile:hover {
+    transition: all ease 0.5s;
+    background: hsla(198, 100%, 95%, 1);
+}
+.imageContainer {
+    transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.5, 1), 2s box-shadow,
+        2s -webkit-transform cubic-bezier(0.155, 1.105, 0.5, 1) !important;
+}
+.imageContainer:hover {
+    transform: scale(1.03);
+}
+/* Floating Button */
+.floating-container {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    bottom: 0;
+    right: 0;
+    margin: 35px 25px;
+    z-index: 100;
+}
+.floating-container:hover {
+    height: 200px;
+}
+.floating-container:hover .floating-button {
+    box-shadow: 0 10px 25px rgba(78, 115, 223, 0.6);
+    transform: translateY(5px);
+    transition: all 0.3s;
+}
+.floating-button {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: rgb(78, 115, 223);
+    bottom: 0;
+    border-radius: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 65px;
+    color: white;
+    font-size: 23px;
+    z-index: 100;
+    cursor: pointer;
+    box-shadow: 0 10px 25px -5px rgba(78, 115, 223, 0.6);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.float-element {
+    position: relative;
+    display: block;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    color: white;
+    display: grid;
+    place-items: center;
+    z-index: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.float-element:nth-child(1) {
+    background: #42a5f5;
+    box-shadow: 0 20px 20px -10px rgba(66, 165, 245, 0.5);
+}
+.float-element:nth-child(2) {
+    background: #4caf50;
+    box-shadow: 0 20px 20px -10px rgba(76, 175, 80, 0.5);
+}
+.floating-container:hover .element-container .float-element:nth-child(1) {
+    animation: come 0.1s forwards;
+}
+.floating-container:hover .element-container .float-element:nth-child(2) {
+    animation: come 0.1s forwards;
+}
+@keyframes come {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
